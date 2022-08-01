@@ -1,7 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const generateMarkdown = require("./utils/generateMarkdown.js");
-const validate = require("./utils/validator");
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -59,7 +58,17 @@ const questions = [
     type: "input",
     message: "What is your contact email?",
     name: "email",
-    validate: validate(email),
+    default: () => {},
+    // https://gist.github.com/Amitabh-K/ae073eea3d5207efaddffde19b1618e8
+    validate: function (email) {
+      valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
+      if (valid) {
+        return true;
+      } else {
+        console.log(" is not a valid email. Please enture a valid email.");
+        return false;
+      }
+    },
   },
 ];
 

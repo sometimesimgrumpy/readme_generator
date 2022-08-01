@@ -59,7 +59,7 @@ function generateMarkdown(questions) {
 
   ## Description
 
-  ##Table of Contents
+  ## Table of Contents
     - [Installation Instructions](#installation)
     - [Usage](#usage)
     - [Contributing](#contributing)
