@@ -39,7 +39,7 @@ function renderLicenseLink(license) {
   } else if (license === "Mozilla Public License 2.0") {
     return `[Mozilla Public License 2.0](https://opensource.org/licenses/MPL-2.0)`;
   } else if (license === "WTFPL License") {
-    return `[License: WTFPL License](http://www.wtfpl.net/about/)`;
+    return `[WTFPL License](http://www.wtfpl.net/about/)`;
   } else if (license === "No License") {
     return "";
   }
@@ -50,22 +50,23 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
   return `
   This project is licensed with ${renderLicenseLink(license)}.
+
   ${renderLicenseBadge(license)}`;
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(questions) {
-  return `#${questions.projTitle}
+  return `# ${questions.projTitle}
 
   ## Description
 
   ## Table of Contents
-    - [Installation Instructions](#installation)
-    - [Usage](#usage)
-    - [Contributing](#contributing)
-    - [Tests](#tests)
-    - [License](#license)
-    - [Questions](#questions)
+  - [Installation Instructions](#installation)
+  - [Usage](#usage)
+  - [Contributing](#contributing)
+  - [Tests](#tests)
+  - [License](#license)
+  - [Questions](#questions)
 
   ## Installation
   My project can be installed using the following terminal prompt:
@@ -89,7 +90,10 @@ function generateMarkdown(questions) {
   ${renderLicenseSection(questions.license)}
 
   ## Questions
-  If there are any additional question please contact: ${questions.email} 
+  If there are any additional question please contact: [${
+    questions.email
+  }](mailto:${questions.email})
+   
   Or visit the github repository at: https://github.com/${questions.gitUser}`;
 }
 
