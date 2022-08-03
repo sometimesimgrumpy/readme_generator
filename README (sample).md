@@ -1,4 +1,4 @@
-# README Generator
+# Demo Project
 
 ## Description
 
@@ -15,23 +15,23 @@
 
 My project can be installed using the following terminal prompt:
 
-To initialize this project, change into your project directory and from the terminal type the command `node index.js.`
+Run node index.js
 
 ## Usage
 
-Primary use is for students and beginner coders to create README files with ease.
+To run this demo
 
-## How It Looks
+## Contributing
 
-Video: https://drive.google.com/file/d/1FWbZ4Fi6GTp50FmlhjgfYWXC7JJThXmZ/view
+No one
 
 ## Tests
 
-No tests are being run on this application.
+No tests
 
 ## License
 
-This project is not licensed.
+This project is licensed with .
 
 ## Questions
 

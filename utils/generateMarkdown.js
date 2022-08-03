@@ -60,6 +60,8 @@ function generateMarkdown(questions) {
 
   ## Description
 
+  ${questions.description}
+
   ## Table of Contents
   - [Installation Instructions](#installation)
   - [Usage](#usage)
