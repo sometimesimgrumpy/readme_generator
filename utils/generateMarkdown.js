@@ -33,7 +33,7 @@ function renderLicenseLink(license) {
   } else if (license === "GNU GPL v3") {
     return `[GNU GPL v3](https://www.gnu.org/licenses/gpl-3.0)`;
   } else if (license === "ISC License") {
-    return `[ISC License]https://opensource.org/licenses/ISC)`;
+    return `[ISC License](https://opensource.org/licenses/ISC)`;
   } else if (license === "MIT License") {
     return `[MIT License](https://opensource.org/licenses/MIT)`;
   } else if (license === "Mozilla Public License 2.0") {
@@ -93,7 +93,7 @@ function generateMarkdown(questions) {
   If there are any additional question please contact: [${
     questions.email
   }](mailto:${questions.email})
-   
+
   Or visit the github repository at: https://github.com/${questions.gitUser}`;
 }
 
